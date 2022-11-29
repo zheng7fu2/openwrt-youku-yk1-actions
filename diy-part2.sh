@@ -8,7 +8,7 @@
 # 这里的脚本在获取feeds后执行
 #=================================================
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.10/g' package/base-files/files/bin/config_generate
 sed -i 's/\"#src-git\"/\"src-git\"/g' ./feeds.conf.default
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 #git clone https://github.com/kenzok8/openwrt-packages package/op-packages
@@ -25,7 +25,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr package/diy-packages/hellow
 # 获取passwall
 git clone -b 3.6-40 https://github.com/liuran001/luci-app-passwall package/diy-packages/passwall
 # 获取Lienol-package
-git clone https://github.com/Lienol/openwrt-package package/diy-packages/lienol
+# git clone https://github.com/Lienol/openwrt-package package/diy-packages/lienol
 
 make && sudo make install
 popd
